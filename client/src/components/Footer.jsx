@@ -29,7 +29,7 @@ export default function Footer() {
     <footer className="border-t border-[#cba135]/20 bg-[#071510] pb-8 pt-16 text-[#e7ddcb]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 border-b border-[#154236] pb-12 md:grid-cols-2 lg:grid-cols-4">
-          
+
           {/* Brand Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-3">
@@ -84,12 +84,7 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <a
-                  href={waChatUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 font-medium text-[#25D366] transition-colors hover:text-emerald-400"
-                >
+                <a href={waChatUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 font-medium text-[#25D366] transition-colors hover:text-emerald-400">
                   <ChevronRight className="h-3.5 w-3.5 text-[#25D366]" />
                   WhatsApp Specialist
                 </a>

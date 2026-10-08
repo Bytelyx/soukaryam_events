@@ -132,11 +132,10 @@ export default function CulinaryShowcase() {
                 key={cat.id}
                 type="button"
                 onClick={() => setActiveTab(cat.id)}
-                className={`rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide transition-all sm:text-sm ${
-                  isActive
+                className={`rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide transition-all sm:text-sm ${isActive
                     ? 'bg-gradient-to-r from-[#e8cc75] to-[#cba135] text-[#0a1d17] shadow-lg shadow-[#cba135]/20'
                     : 'border border-white/10 bg-[#0f2f26]/80 text-gray-300 hover:bg-[#154236] hover:text-white'
-                }`}
+                  }`}
               >
                 {cat.label}
               </button>
@@ -168,7 +167,7 @@ export default function CulinaryShowcase() {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a1d17]/80 via-transparent to-transparent" />
-                  
+
                   <div className="absolute left-4 top-4 rounded-full border border-[#cba135]/40 bg-[#0a1d17]/90 px-3.5 py-1.5 text-xs font-semibold text-[#e8cc75] backdrop-blur-md">
                     {activeCategory.stat}
                   </div>

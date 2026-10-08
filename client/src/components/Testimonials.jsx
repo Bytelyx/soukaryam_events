@@ -53,15 +53,7 @@ export default function Testimonials() {
         {/* Reviews Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {REVIEWS.map((review, index) => (
-            <motion.div
-              key={review.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              whileHover={{ y: -6 }}
-              className="flex flex-col justify-between rounded-3xl border border-[#cba135]/25 bg-white p-8 shadow-lg transition-shadow duration-300 hover:shadow-2xl"
-            >
+            <motion.div key={review.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -6 }} className="flex flex-col justify-between rounded-3xl border border-[#cba135]/25 bg-white p-8 shadow-lg transition-shadow duration-300 hover:shadow-2xl">
               <div>
                 <div className="mb-4 flex items-center justify-between">
                   <div className="flex items-center gap-1">

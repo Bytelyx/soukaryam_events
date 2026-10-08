@@ -75,15 +75,7 @@ export default function WhyUs() {
           {REASONS.map((reason, index) => {
             const Icon = reason.icon;
             return (
-              <motion.div
-                key={reason.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                whileHover={{ y: -6 }}
-                className="rounded-2xl border border-[#cba135]/20 bg-[#0f2f26]/70 p-7 backdrop-blur-md transition-all duration-300 hover:border-[#cba135]/60 hover:shadow-[0_0_25px_rgba(203,161,53,0.15)]"
-              >
+              <motion.div key={reason.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.08 }} whileHover={{ y: -6 }} className="rounded-2xl border border-[#cba135]/20 bg-[#0f2f26]/70 p-7 backdrop-blur-md transition-all duration-300 hover:border-[#cba135]/60 hover:shadow-[0_0_25px_rgba(203,161,53,0.15)]">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl border border-[#cba135]/30 bg-[#154236] text-[#e8cc75]">
                   <Icon className="h-6 w-6" />
                 </div>

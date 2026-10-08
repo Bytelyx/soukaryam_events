@@ -1,18 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import {
-  HeartHandshake,
-  UtensilsCrossed,
-  Briefcase,
-  PartyPopper,
-  Flame,
-  Sparkles,
-  ArrowRight,
-  Users,
-  CheckCircle2,
-  MessageCircle,
-} from 'lucide-react';
+import { HeartHandshake, UtensilsCrossed, Briefcase, PartyPopper, Flame, Sparkles, ArrowRight, Users, CheckCircle2, MessageCircle } from 'lucide-react';
 import gsap from 'gsap';
 import { getWhatsAppUrl } from '../config/env';
 
@@ -123,15 +112,11 @@ const SERVICES = [
 
 export default function SignatureServices({ showFooterCta = true }) {
   const navigate = useNavigate();
-
   const [isTransitioning, setIsTransitioning] = useState(false);
-
   const biriyaniCardRef = useRef(null);
   const transitionRef = useRef(null);
-
   const handleBiriyaniClick = () => {
     if (isTransitioning) return;
-
     const card = biriyaniCardRef.current;
 
     if (!card) {
@@ -140,7 +125,6 @@ export default function SignatureServices({ showFooterCta = true }) {
     }
 
     const rect = card.getBoundingClientRect();
-
     setIsTransitioning(true);
 
     requestAnimationFrame(() => {
@@ -176,16 +160,111 @@ export default function SignatureServices({ showFooterCta = true }) {
 
   return (
     <>
-      {/* ================================
-          GSAP PAGE TRANSITION
-      ================================= */}
-      {isTransitioning && (
-        <div
-          ref={transitionRef}
-          className="fixed z-[9999] overflow-hidden bg-[#0a1d17]"
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0a1d17] via-[#154236] to-[#0a1d17]" />
+      {/*  BIRIYANI CARD */}
 
+      <style>{`
+        .biriyani-special-card {
+          position: relative;
+          isolation: isolate;
+          overflow: hidden;
+          box-shadow:
+            0 8px 30px rgba(10, 29, 23, 0.08),
+            0 0 0 rgba(203, 161, 53, 0);
+        }
+
+        .biriyani-special-card::before {
+          content: '';
+          position: absolute;
+          inset: -3px;
+          z-index: -2;
+          border-radius: 27px;
+
+          background: conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            transparent 25deg,
+            #8f6b16 45deg,
+            #cba135 65deg,
+            #f5df8a 85deg,
+            #fff1a8 100deg,
+            #cba135 120deg,
+            transparent 145deg,
+            transparent 360deg
+          );
+
+          animation: biriyaniBorderRotate 4.5s linear infinite;
+        }
+
+        .biriyani-special-card::after {
+          content: '';
+          position: absolute;
+          inset: 2px;
+          z-index: -1;
+          border-radius: 23px;
+          background: #ffffff;
+          pointer-events: none;
+        }
+
+        @keyframes biriyaniBorderRotate {
+          from {
+            transform: rotate(0deg);
+          }
+
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .biriyani-special-card:hover {
+          box-shadow:
+            0 20px 50px rgba(10, 29, 23, 0.15),
+            0 0 25px rgba(203, 161, 53, 0.18),
+            0 0 55px rgba(203, 161, 53, 0.08);
+        }
+
+        .biriyani-special-card .gold-shine {
+          position: absolute;
+          inset: 0;
+          z-index: 5;
+          pointer-events: none;
+          border-radius: 24px;
+
+          background: linear-gradient(
+            120deg,
+            transparent 30%,
+            rgba(255, 230, 140, 0.05) 43%,
+            rgba(255, 255, 255, 0.18) 50%,
+            rgba(255, 230, 140, 0.05) 57%,
+            transparent 70%
+          );
+
+          transform: translateX(-120%);
+          animation: goldShine 6s ease-in-out infinite;
+        }
+
+        @keyframes goldShine {
+          0% {
+            transform: translateX(-120%);
+          }
+
+          40%,
+          100% {
+            transform: translateX(120%);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .biriyani-special-card::before,
+          .biriyani-special-card .gold-shine {
+            animation: none;
+          }
+        }
+      `}</style>
+
+      {/* GSAP PAGE TRANSITION */}
+      {isTransitioning && (
+        <div ref={transitionRef} className="fixed z-[9999] overflow-hidden bg-[#0a1d17]">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0a1d17] via-[#154236] to-[#0a1d17]" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-[#cba135]/40 bg-[#cba135]/10 backdrop-blur-xl">
               <div className="h-8 w-8 animate-pulse rounded-full bg-[#cba135]" />
@@ -194,73 +273,42 @@ export default function SignatureServices({ showFooterCta = true }) {
         </div>
       )}
 
+      {/* MAIN SECTION */}
       <section className="relative bg-[#fcfaf5] py-20 text-[#1a1f1e] md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-          {/* ================================
-              HEADER
-          ================================= */}
+          {/* HEADER */}
           <div className="mx-auto mb-16 max-w-3xl text-center">
-
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="mb-3 inline-flex items-center gap-2 rounded-full border border-[#154236]/20 bg-[#154236]/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#154236]"
-            >
+            <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4 }} className="mb-3 inline-flex items-center gap-2 rounded-full border border-[#154236]/20 bg-[#154236]/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#154236]">
               <Sparkles className="h-3.5 w-3.5 text-[#cba135]" />
               Our Signature Offerings
             </motion.div>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              className="font-serif text-3xl font-bold tracking-tight text-[#0a1d17] sm:text-4xl lg:text-5xl"
-            >
+            <motion.h2 initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.1 }} className="font-serif text-3xl font-bold tracking-tight text-[#0a1d17] sm:text-4xl lg:text-5xl">
               Culinary Craftsmanship for{' '}
               <br className="hidden sm:inline" />
 
-              <span className="text-[#1e5e4d]">
-                Every Occasion.
-              </span>
+              <span className="text-[#1e5e4d]"> Every Occasion.</span>
             </motion.h2>
 
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.15 }}
-              className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg"
-            >
+            <motion.p initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.15 }} className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg">
               We blend time-honored traditional recipes with contemporary
               culinary artistry to create dining experiences that delight your
               guests and honor your milestone.
             </motion.p>
           </div>
 
-          {/* ================================
-              SERVICES GRID
-          ================================= */}
+          {/* SERVICES GRID */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-
             {SERVICES.map((service, index) => {
               const Icon = service.icon;
-
               const waUrl = getWhatsAppUrl(
                 `Hello Soukaryam Events, I would like to enquire about "${service.title}" (${service.category}) for an estimated capacity of ${service.capacity}. Please share availability and menu packages.`
               );
 
               const isBiriyani = service.id === 'biriyani-menu';
-
               return (
-                <motion.div
-                  key={service.id}
-                  ref={isBiriyani ? biriyaniCardRef : null}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                <motion.div key={service.id} ref={isBiriyani ? biriyaniCardRef : null} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
                   viewport={{
                     once: true,
                     amount: 0.15,
@@ -285,25 +333,22 @@ export default function SignatureServices({ showFooterCta = true }) {
                       handleBiriyaniClick();
                     }
                   }}
-                  className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-[#cba135]/20 bg-white shadow-md transition-all duration-300 hover:border-[#cba135]/60 hover:shadow-2xl ${
-                    isBiriyani ? 'cursor-pointer' : ''
-                  }`}
+                  className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-md transition-all duration-300 ${isBiriyani
+                      ? 'biriyani-special-card cursor-pointer'
+                      : 'border border-[#cba135]/20 hover:border-[#cba135]/60 hover:shadow-2xl'
+                    }`}
                 >
 
-                  {/* ================================
-                      IMAGE
-                  ================================= */}
-                  <div className="relative h-56 overflow-hidden">
+                  {/* GOLD SHINE */}
+                  {isBiriyani && (
+                    <div className="gold-shine" />
+                  )}
 
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                      loading="lazy"
-                    />
+                  {/* IMAGE */}
+                  <div className="relative h-56 overflow-hidden">
+                    <img src={service.image} alt={service.title} className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
-
                     <span className="absolute left-4 top-4 rounded-full border border-[#cba135]/30 bg-[#0a1d17]/85 px-3 py-1 text-xs font-semibold text-[#e8cc75] backdrop-blur-md">
                       {service.category}
                     </span>
@@ -313,24 +358,19 @@ export default function SignatureServices({ showFooterCta = true }) {
                       {service.capacity}
                     </span>
 
-                    {/* Biriyani indicator */}
+                    {/* BIRIYANI CLICK INDICATOR */}
                     {isBiriyani && (
-                      <div className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full border border-[#e8cc75]/30 bg-[#0a1d17]/80 px-3 py-1.5 text-xs font-bold text-[#e8cc75] backdrop-blur-md">
+                      <div className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full border border-[#e8cc75]/60 bg-[#0a1d17]/90 px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#f5df8a] shadow-lg shadow-black/20 backdrop-blur-md transition-all duration-300 group-hover:scale-105 group-hover:bg-[#154236]">
                         Explore Menu
-                        <ArrowRight className="h-3.5 w-3.5" />
+                        <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                       </div>
                     )}
                   </div>
 
-                  {/* ================================
-                      CONTENT
-                  ================================= */}
+                  {/* CONTENT */}
                   <div className="flex flex-1 flex-col justify-between p-6">
-
                     <div>
-
                       <div className="mb-2 flex items-center gap-3">
-
                         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#154236]/10 text-[#154236] transition-colors duration-300 group-hover:bg-[#154236] group-hover:text-[#e8cc75]">
                           <Icon className="h-5 w-5" />
                         </div>
@@ -346,66 +386,40 @@ export default function SignatureServices({ showFooterCta = true }) {
 
                       {/* FEATURES */}
                       <div className="mb-6 space-y-2 border-t border-gray-100 pt-4">
-
                         {service.highlights.map((item) => (
-                          <div
-                            key={item}
-                            className="flex items-start gap-2 text-xs font-medium text-gray-700"
-                          >
+                          <div key={item} className="flex items-start gap-2 text-xs font-medium text-gray-700">
                             <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#154236]" />
-
-                            <span>
-                              {item}
-                            </span>
+                            <span>{item}</span>
                           </div>
                         ))}
-
                       </div>
                     </div>
 
-                    {/* ================================
-                        ACTIONS
-                    ================================= */}
-                    <div
-                      className="flex items-center justify-between border-t border-gray-100 pt-4"
+                    {/* ACTIONS */}
+                    <div className="flex items-center justify-between border-t border-gray-100 pt-4"
                       onClick={(event) => {
                         if (isBiriyani) {
                           event.stopPropagation();
                         }
                       }}
                     >
-
-                      <a
-                        href={waUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 py-1 text-xs font-bold uppercase tracking-wider text-[#154236] transition-colors hover:text-[#cba135]"
-                      >
+                      <a href={waUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 py-1 text-xs font-bold uppercase tracking-wider text-[#154236] transition-colors hover:text-[#cba135]">
                         <MessageCircle className="h-4 w-4 text-[#25D366]" />
-
                         Enquire
-
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </a>
                     </div>
-
                   </div>
                 </motion.div>
               );
             })}
           </div>
 
-          {/* ================================
-              FOOTER CTA
-          ================================= */}
+          {/* FOOTER CTA */}
           {showFooterCta && (
             <div className="mt-14 text-center">
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 rounded-full border border-[#cba135]/40 bg-[#0a1d17] px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-white shadow-lg transition-colors hover:bg-[#154236]"
-              >
+              <Link to="/services" className="inline-flex items-center gap-2 rounded-full border border-[#cba135]/40 bg-[#0a1d17] px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-white shadow-lg transition-colors hover:bg-[#154236]">
                 View All Menus, Packages & FAQs
-
                 <ArrowRight className="h-4 w-4 text-[#cba135]" />
               </Link>
             </div>

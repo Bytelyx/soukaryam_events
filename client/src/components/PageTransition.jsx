@@ -14,14 +14,7 @@ const pageTransition = {
 
 export default function PageTransition({ children, className = '' }) {
   return (
-    <motion.div
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants}
-      transition={pageTransition}
-      className={`w-full flex-grow ${className}`}
-    >
+    <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition} className={`w-full flex-grow ${className}`}>
       {children}
     </motion.div>
   );

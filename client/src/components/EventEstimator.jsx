@@ -114,7 +114,7 @@ Please share date availability and customized package quote.`;
         {/* Estimator Card */}
         <div className="mx-auto max-w-5xl rounded-3xl border border-[#cba135]/25 bg-white p-6 shadow-xl sm:p-10 lg:p-12">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12">
-            
+
             {/* Input Options */}
             <div className="space-y-8 lg:col-span-7">
               {/* Event Type */}
@@ -130,11 +130,10 @@ Please share date availability and customized package quote.`;
                         key={type}
                         type="button"
                         onClick={() => setSelectedEvent(type)}
-                        className={`rounded-2xl px-4 py-3 text-left text-xs font-semibold transition-all sm:text-sm ${
-                          isSelected
+                        className={`rounded-2xl px-4 py-3 text-left text-xs font-semibold transition-all sm:text-sm ${isSelected
                             ? 'border border-[#cba135] bg-[#154236] text-[#e8cc75] shadow-sm'
                             : 'border border-gray-200 bg-[#fcfaf5] text-gray-700 hover:bg-[#f7f3ea]'
-                        }`}
+                          }`}
                       >
                         {type}
                       </button>
@@ -185,11 +184,10 @@ Please share date availability and customized package quote.`;
                         key={tier.id}
                         type="button"
                         onClick={() => setSelectedTier(tier.id)}
-                        className={`relative rounded-2xl p-3.5 text-left border transition-all ${
-                          isSelected
+                        className={`relative rounded-2xl p-3.5 text-left border transition-all ${isSelected
                             ? 'border-[#cba135] bg-[#154236]/5 ring-2 ring-[#cba135]'
                             : 'border-gray-200 bg-white hover:border-gray-300'
-                        }`}
+                          }`}
                       >
                         {tier.popular && (
                           <span className="absolute -top-2.5 right-3 rounded-full bg-[#cba135] px-2 py-0.5 text-[10px] font-bold uppercase text-[#0a1d17]">
