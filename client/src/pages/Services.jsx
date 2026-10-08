@@ -173,7 +173,7 @@ export default function Services() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             {packages.map((pkg, idx) => {
-              const whatsappText = `Hello Soukaryam Events, I would like to enquire about the "${pkg.name}" (${pkg.tier}) catering package at ${pkg.price}. Inclusions: ${pkg.features.join(', ')}. Please provide availability and quote.`;
+              const whatsappText = `Hello Soukaryam Events, I would like to enquire about the "${pkg.name}" (${pkg.tier}) catering package at ${pkg.price}. Please provide availability and quote.`;
               const pkgWhatsappUrl = getWhatsAppUrl(whatsappText);
 
               return (

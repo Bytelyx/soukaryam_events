@@ -1,25 +1,14 @@
 import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import {
-  HeartHandshake,
-  UtensilsCrossed,
-  Briefcase,
-  PartyPopper,
-  Flame,
-  Sparkles,
-  ArrowRight,
-  Users,
-  CheckCircle2,
-  MessageCircle,
-} from 'lucide-react';
+import { HeartHandshake, UtensilsCrossed, Briefcase, PartyPopper, Flame, Sparkles, ArrowRight, Users, CheckCircle2, MessageCircle, } from 'lucide-react';
 import gsap from 'gsap';
 import { getWhatsAppUrl } from '../config/env';
 
 const SERVICES = [
   {
     id: 'wedding-catering',
-    title: 'Luxury Wedding Banquets',
+    title: 'Wedding Banquets',
     category: 'Complete Wedding Events',
     description:
       'Complete wedding arrangements crafted to make your celebration truly grand — from elegant stage design and décor to traditional pandals, premium catering, and every essential detail required for a memorable wedding.',
@@ -37,7 +26,7 @@ const SERVICES = [
   },
   {
     id: 'biriyani-menu',
-    title: 'Royal Biriyani Experience',
+    title: 'Royal Biriyani',
     category: 'Biriyani & Rice Specialities',
     description:
       'A grand celebration of fragrant basmati rice, slow-cooked meats and handpicked spices. From traditional Kerala flavours to rich Arabian and Hyderabadi preparations, every plate is crafted for unforgettable celebrations.',
@@ -54,7 +43,7 @@ const SERVICES = [
   },
   {
     id: 'traditional-sadhya',
-    title: 'Authentic Royal Sadhya',
+    title: 'Authentic Sadhya',
     category: 'Heritage South Indian',
     description:
       'The pinnacle of Kerala gastronomic culture. Up to 28+ authentic vegetarian delicacies served in disciplined harmony on fresh plantain leaves.',
@@ -105,7 +94,7 @@ const SERVICES = [
   },
   {
     id: 'private-parties',
-    title: 'Intimate Soirées & Birthdays',
+    title: 'Intimate Programs & Birthdays',
     category: 'Private Gatherings',
     description:
       'Celebrations with family and dear friends made memorable with customized menus, chic presentations, and attentive care.',
@@ -358,7 +347,7 @@ export default function SignatureServices({ showFooterCta = true }) {
 
       `}</style>
 
-{/* Gsap animation */}
+      {/* Gsap animation */}
       {isTransitioning && (
         <div ref={transitionRef} className="fixed z-[9999] overflow-hidden bg-[#0a1d17]">
           <div className="absolute inset-0 bg-gradient-to-br from-[#0a1d17] via-[#154236] to-[#0a1d17]" />
@@ -432,7 +421,7 @@ export default function SignatureServices({ showFooterCta = true }) {
             {SERVICES.map((service, index) => {
               const Icon = service.icon;
               const waUrl = getWhatsAppUrl(
-                `Hello Soukaryam Events, I would like to enquire about "${service.title}" (${service.category}) for an estimated capacity of ${service.capacity}. Please share availability and menu packages.`
+                `Hello Soukaryam Events, I would like to enquire about "${service.title}" (${service.category}). Please share availability and menu packages.`
               );
               const isBiriyani =
                 service.id === 'biriyani-menu';
@@ -516,7 +505,7 @@ export default function SignatureServices({ showFooterCta = true }) {
                   )}
 
                   <div className="relative z-[2] h-56 overflow-hidden">
-                    <img src={service.image} alt={service.title} className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy"/>
+                    <img src={service.image} alt={service.title} className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" />
 
                     {/* IMAGE GRADIENT */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
