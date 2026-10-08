@@ -2,34 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import PageTransition from '../components/PageTransition';
 import ContactForm from '../components/ContactForm';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  MessageCircle, 
-  Sparkles, 
-  ShieldCheck, 
-  CheckCircle2
-} from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageCircle, Sparkles, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { WHATSAPP_DISPLAY, CONTACT_EMAIL, getWhatsAppUrl } from '../config/env';
 
 export default function Contact() {
   return (
     <PageTransition>
       <div className="w-full bg-[#fcfaf5]">
-        
+
         {/* Contact Page Hero */}
         <section className="bg-[#0a1d17] text-white py-16 md:py-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(203,161,53,0.15),transparent_70%)] pointer-events-none" />
-          
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#154236] border border-[#cba135]/40 text-[#e8cc75] text-xs font-semibold uppercase tracking-wider mb-4"
-            >
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#154236] border border-[#cba135]/40 text-[#e8cc75] text-xs font-semibold uppercase tracking-wider mb-4">
               <Sparkles className="w-3.5 h-3.5 text-[#cba135]" />
               <span>We Are At Your Service</span>
             </motion.div>
@@ -60,10 +46,10 @@ export default function Contact() {
         {/* Main Content Area */}
         <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            
+
             {/* Left Column: Contact Cards & Info */}
             <div className="lg:col-span-5 space-y-6">
-              
+
               {/* Primary Contact Card */}
               <div className="bg-[#0a1d17] text-white rounded-3xl p-8 border border-[#cba135]/30 shadow-xl space-y-6">
                 <div>
@@ -80,10 +66,7 @@ export default function Contact() {
 
                 <div className="space-y-5 pt-2 border-t border-[#154236]">
                   {/* Phone */}
-                  <a
-                    href={`tel:${WHATSAPP_DISPLAY.replace(/[\s\-]/g, '')}`}
-                    className="flex items-start gap-3.5 group hover:text-[#e8cc75] transition-colors"
-                  >
+                  <a href={`tel:${WHATSAPP_DISPLAY.replace(/[\s\-]/g, '')}`} className="flex items-start gap-3.5 group hover:text-[#e8cc75] transition-colors">
                     <div className="w-10 h-10 rounded-xl bg-[#154236] border border-[#cba135]/30 flex items-center justify-center text-[#cba135] shrink-0 group-hover:bg-[#cba135] group-hover:text-[#0a1d17] transition-colors">
                       <Phone className="w-5 h-5" />
                     </div>
@@ -99,12 +82,7 @@ export default function Contact() {
                   </a>
 
                   {/* WhatsApp */}
-                  <a
-                    href={getWhatsAppUrl("Hello Soukaryam Events, I would like to enquire about event catering.")}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-start gap-3.5 group hover:text-emerald-300 transition-colors"
-                  >
+                  <a href={getWhatsAppUrl("Hello Soukaryam Events, I would like to enquire about event catering.")} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3.5 group hover:text-emerald-300 transition-colors">
                     <div className="w-10 h-10 rounded-xl bg-[#25D366]/20 border border-[#25D366]/40 flex items-center justify-center text-[#25D366] shrink-0 group-hover:bg-[#25D366] group-hover:text-white transition-colors">
                       <MessageCircle className="w-5 h-5" />
                     </div>
@@ -120,10 +98,7 @@ export default function Contact() {
                   </a>
 
                   {/* Email */}
-                  <a
-                    href={`mailto:${CONTACT_EMAIL}`}
-                    className="flex items-start gap-3.5 group hover:text-[#e8cc75] transition-colors"
-                  >
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="flex items-start gap-3.5 group hover:text-[#e8cc75] transition-colors">
                     <div className="w-10 h-10 rounded-xl bg-[#154236] border border-[#cba135]/30 flex items-center justify-center text-[#cba135] shrink-0 group-hover:bg-[#cba135] group-hover:text-[#0a1d17] transition-colors">
                       <Mail className="w-5 h-5" />
                     </div>

@@ -3,14 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import PageTransition from '../components/PageTransition';
 import CtaBanner from '../components/CtaBanner';
-import { 
-  Sparkles, 
-  Check, 
-  HelpCircle, 
-  ChevronDown, 
-  ArrowRight,
-  MessageCircle
-} from 'lucide-react';
+import {  Sparkles, Check, HelpCircle, ChevronDown, ArrowRight, MessageCircle} from 'lucide-react';
 import { getWhatsAppUrl } from '../config/env';
 import SignatureServices from '../components/SignatureServices';
 
@@ -238,11 +231,7 @@ export default function Services() {
                   </div>
 
                   <div className="pt-8 space-y-2">
-                    <a
-                      href={pkgWhatsappUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
+                    <a href={pkgWhatsappUrl} target="_blank" rel="noopener noreferrer"className={`w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
                         pkg.highlight
                           ? 'bg-gradient-to-r from-[#e8cc75] via-[#cba135] to-[#b89129] text-[#0a1d17] hover:shadow-lg'
                           : 'bg-[#154236] text-white hover:bg-[#0a1d17]'
@@ -253,10 +242,7 @@ export default function Services() {
                       <ArrowRight className="w-4 h-4" />
                     </a>
 
-                    <Link
-                      to={`/contact?eventType=${encodeURIComponent(pkg.name)}`}
-                      className="block text-center text-[11px] text-gray-400 hover:text-[#cba135] underline pt-1"
-                    >
+                    <Link to={`/contact?eventType=${encodeURIComponent(pkg.name)}`} className="block text-center text-[11px] text-gray-400 hover:text-[#cba135] underline pt-1">
                       Or submit detailed proposal request
                     </Link>
                   </div>
@@ -319,20 +305,12 @@ export default function Services() {
             {faqs.map((faq, idx) => {
               const isOpen = openFaq === idx;
               return (
-                <div
-                  key={idx}
-                  className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm"
-                >
-                  <button
-                    type="button"
-                    onClick={() => toggleFaq(idx)}
-                    className="w-full p-5 text-left flex items-center justify-between gap-4 hover:bg-gray-50/50 transition-colors"
-                  >
+                <div key={idx} className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                  <button type="button" onClick={() => toggleFaq(idx)} className="w-full p-5 text-left flex items-center justify-between gap-4 hover:bg-gray-50/50 transition-colors">
                     <span className="font-serif font-bold text-sm sm:text-base text-[#0a1d17]">
                       {faq.q}
                     </span>
-                    <ChevronDown
-                      className={`w-5 h-5 text-[#cba135] shrink-0 transition-transform duration-300 ${
+                    <ChevronDown className={`w-5 h-5 text-[#cba135] shrink-0 transition-transform duration-300 ${
                         isOpen ? 'rotate-180' : ''
                       }`}
                     />
@@ -358,12 +336,7 @@ export default function Services() {
 
           <div className="mt-10 text-center text-xs text-gray-500">
             Have a unique question not listed here?{' '}
-            <a
-              href={getWhatsAppUrl("Hello Soukaryam Events, I have a question regarding catering.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#154236] font-bold underline"
-            >
+            <a href={getWhatsAppUrl("Hello Soukaryam Events, I have a question regarding catering.")} target="_blank" rel="noopener noreferrer" className="text-[#154236] font-bold underline">
               Ask our event planner on WhatsApp
             </a>
           </div>
