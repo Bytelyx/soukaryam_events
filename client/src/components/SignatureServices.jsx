@@ -4,6 +4,12 @@ import { motion } from 'framer-motion';
 import { HeartHandshake, UtensilsCrossed, Briefcase, PartyPopper, Flame, Sparkles, ArrowRight, Users, CheckCircle2, MessageCircle, } from 'lucide-react';
 import gsap from 'gsap';
 import { getWhatsAppUrl } from '../config/env';
+import weddingImage from '../assets/services/Wedding.png';
+import biriyaniImage from '../assets/services/Biriyani.png';
+import sadhyaImage from '../assets/services/Sadhya.png';
+//import corporateImage from '../assets/services/corporate.jpg';
+import liveFoodImage from '../assets/services/LiveFood.png';
+import intimateImage from '../assets/services/Intimate.png';
 
 const SERVICES = [
   {
@@ -13,8 +19,7 @@ const SERVICES = [
     description:
       'Complete wedding arrangements crafted to make your celebration truly grand — from elegant stage design and décor to traditional pandals, premium catering, and every essential detail required for a memorable wedding.',
     icon: HeartHandshake,
-    image:
-      'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85',
+    image: weddingImage,
     capacity: '100 – 5,000+ Guests',
     highlights: [
       'Complete Wedding Stage Design & Decoration',
@@ -31,8 +36,7 @@ const SERVICES = [
     description:
       'A grand celebration of fragrant basmati rice, slow-cooked meats and handpicked spices. From traditional Kerala flavours to rich Arabian and Hyderabadi preparations, every plate is crafted for unforgettable celebrations.',
     icon: UtensilsCrossed,
-    image:
-      'https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1200&q=85',
+    image: biriyaniImage,
     capacity: '50 – 5,000+ Guests',
     highlights: [
       'Traditional Dum-Cooked Biriyanis',
@@ -48,8 +52,7 @@ const SERVICES = [
     description:
       'The pinnacle of Kerala gastronomic culture. Up to 28+ authentic vegetarian delicacies served in disciplined harmony on fresh plantain leaves.',
     icon: UtensilsCrossed,
-    image:
-      'https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=1200&q=85',
+    image: sadhyaImage,
     capacity: '50 – 3,000+ Guests',
     highlights: [
       '28+ Dishes (Avial, Olan, Thoran, Kalan)',
@@ -78,12 +81,11 @@ const SERVICES = [
   {
     id: 'live-counters',
     title: 'Live Gourmet Food Stations',
-    category: 'Culinary Theatrics',
+    category: 'Live Food',
     description:
       'Interactive culinary theater that dazzles your guests. Master chefs preparing delicacies right before their eyes.',
     icon: Flame,
-    image:
-      'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85',
+    image: liveFoodImage,
     capacity: 'Any Event Size',
     highlights: [
       'Live Charcoal Tandoor & Grills',
@@ -95,12 +97,11 @@ const SERVICES = [
   {
     id: 'private-parties',
     title: 'Intimate Programs & Birthdays',
-    category: 'Private Gatherings',
+    category: 'Outdoor Parties',
     description:
       'Celebrations with family and dear friends made memorable with customized menus, chic presentations, and attentive care.',
     icon: PartyPopper,
-    image:
-      'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=85',
+    image: intimateImage,
     capacity: '25 – 200 Guests',
     highlights: [
       'Theme-Coordinated Menus',

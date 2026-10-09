@@ -4,6 +4,41 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowLeft, ArrowRight, ChevronDown, MessageCircle, Sparkles, UtensilsCrossed } from 'lucide-react';
 import { getWhatsAppUrl } from '../config/env';
+import chickenBiriyani from '../assets/services/Biriyani.png';
+import lagoonChickenBiriyani from '../assets/biriyani/lagoonChickenBiriyani.png';
+import chickenHyderabadi from '../assets/biriyani/chickenHyderabadi.png';
+import beefBiriyani from '../assets/biriyani/beefBiriyani.png';
+import muttonBiriyani from '../assets/biriyani/muttonBiriyani.png';
+import muttonHyderabadi from '../assets/biriyani/muttonHyderabadi.png';
+import fishBiriyani from '../assets/biriyani/fishBiriyani.png';
+import chickenFriedRice from '../assets/biriyani/chickenFriedRice.png';
+
+import chickenMandi from '../assets/biriyani/chickenMandi.png';
+import beefMandi from '../assets/biriyani/beefMandi.png';
+import muttonMandi from '../assets/biriyani/muttonMandi.png';
+
+import chickenKabsa from '../assets/biriyani/chickenKabsa.png';
+import chickenZurbian from '../assets/biriyani/chickenZurbian.png';
+import chickenMadghout from '../assets/biriyani/chickenMadghout.png';
+import beefKabsa from '../assets/biriyani/beefKabsa.png';
+import beefZurbian from '../assets/biriyani/beefZurbian.png';
+import beefMadghout from '../assets/biriyani/beefMadghout.png';
+import salad from '../assets/biriyani/salad.png';
+
+import chickenFry from '../assets/biriyani/chickenFry.png';
+import chicken65 from '../assets/biriyani/chicken65.png';
+import chickenKebab from '../assets/biriyani/chickenKebab.png';
+import chickenKondattam from '../assets/biriyani/chickenKondattam.png';
+import alfahamChicken from '../assets/biriyani/alfahamChicken.png';
+import broastedChicken from '../assets/biriyani/broastedChicken.png';
+import fishFry from '../assets/biriyani/fishFry.png';
+import fishFingers from '../assets/biriyani/fishFingers.png';
+import fishKebab from '../assets/biriyani/fishKebab.png';
+import prawnsLollipop from '../assets/biriyani/prawnsLollipop.png';
+
+import kadaiChicken from '../assets/biriyani/kadaiChicken.png';
+import chickenKurma from '../assets/biriyani/chickenKurma.png';
+import chickenMulakittathu from '../assets/biriyani/chickenMulakittathu.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,58 +47,58 @@ const BIRYANI_ITEMS = [
   {
     name: 'Chicken Biriyani',
     price: '₹220',
-    image:
-      'https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1000&q=85',
-    description: 'Fragrant basmati rice with tender chicken and aromatic spices.',
+    image: chickenBiriyani,
+    description:
+      'Fragrant basmati rice with tender chicken and aromatic spices.',
   },
   {
     name: 'Lagoon Chicken Biriyani',
     price: '₹260',
-    image:
-      'https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=1000&q=85',
-    description: 'Richly spiced rice layered with succulent chicken.',
+    image: lagoonChickenBiriyani,
+    description:
+      'Richly spiced rice layered with succulent chicken.',
   },
   {
     name: 'Chicken Hyderabadi Dum Biriyani',
     price: '₹280',
-    image:
-      'https://images.unsplash.com/photo-1631515242808-497c3fbd3972?auto=format&fit=crop&w=1000&q=85',
-    description: 'Slow dum-cooked rice with tender chicken and royal spices.',
+    image: chickenHyderabadi,
+    description:
+      'Slow dum-cooked rice with tender chicken and royal spices.',
   },
   {
     name: 'Beef Biriyani',
     price: '₹260',
-    image:
-      'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1000&q=85',
-    description: 'Tender beef, fragrant rice and traditional Kerala spices.',
+    image: beefBiriyani,
+    description:
+      'Tender beef, fragrant rice and traditional Kerala spices.',
   },
   {
     name: 'Mutton Biriyani',
     price: '₹320',
-    image:
-      'https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?auto=format&fit=crop&w=1000&q=85',
-    description: 'Slow-cooked mutton layered with aromatic basmati rice.',
+    image: muttonBiriyani,
+    description:
+      'Slow-cooked mutton layered with aromatic basmati rice.',
   },
   {
     name: 'Mutton Hyderabadi Biriyani',
     price: '₹340',
-    image:
-      'https://images.unsplash.com/photo-1631515243349-e0cb75fb8d7e?auto=format&fit=crop&w=1000&q=85',
-    description: 'Luxurious dum biriyani with tender mutton and rich spices.',
+    image: muttonHyderabadi,
+    description:
+      'Luxurious dum biriyani with tender mutton and rich spices.',
   },
   {
     name: 'Fish Biriyani',
     price: '₹300',
-    image:
-      'https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=1000&q=85',
-    description: 'Delicately spiced fish with fragrant biriyani rice.',
+    image: fishBiriyani,
+    description:
+      'Delicately spiced fish with fragrant biriyani rice.',
   },
   {
     name: 'Chicken Fried Rice',
     price: '₹220',
-    image:
-      'https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=1000&q=85',
-    description: 'Wok-tossed rice with chicken, vegetables and herbs.',
+    image: chickenFriedRice,
+    description:
+      'Wok-tossed rice with chicken, vegetables and herbs.',
   },
 ];
 
@@ -72,22 +107,19 @@ const MANDI_ITEMS = [
   {
     name: 'Chicken Mandi',
     price: '₹280',
-    image:
-      'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=85',
+    image: chickenMandi,
     description: 'Smoky roasted chicken served with fragrant mandi rice.',
   },
   {
     name: 'Beef Mandi',
     price: '₹320',
-    image:
-      'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85',
+    image: beefMandi,
     description: 'Tender beef paired with aromatic Arabian mandi rice.',
   },
   {
     name: 'Mutton Mandi',
     price: '₹360',
-    image:
-      'https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?auto=format&fit=crop&w=1000&q=85',
+    image: muttonMandi,
     description: 'Slow-roasted mutton with beautifully seasoned mandi rice.',
   },
 ];
@@ -97,51 +129,51 @@ const ARABIAN_SPECIALS = [
   {
     name: 'Chicken Kabsa / Kabili',
     price: '₹280',
-    image:
-      'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=85',
-    description: 'Aromatic Arabian rice with tender chicken and warm spices.',
+    image: chickenKabsa,
+    description:
+      'Aromatic Arabian rice with tender chicken and warm spices.',
   },
   {
     name: 'Chicken Zurbian',
     price: '₹280',
-    image:
-      'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1000&q=85',
-    description: 'Fragrant spiced rice with tender chicken and Arabian flavours.',
+    image: chickenZurbian,
+    description:
+      'Fragrant spiced rice with tender chicken and Arabian flavours.',
   },
   {
     name: 'Chicken Madghout',
     price: '₹280',
-    image:
-      'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1000&q=85',
-    description: 'Slow-cooked chicken and rice infused with rich spices.',
+    image: chickenMadghout,
+    description:
+      'Slow-cooked chicken and rice infused with rich spices.',
   },
   {
     name: 'Beef Kabsa / Kabili',
     price: '₹300',
-    image:
-      'https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1000&q=85',
-    description: 'Fragrant Kabsa rice paired with succulent beef.',
+    image: beefKabsa,
+    description:
+      'Fragrant Kabsa rice paired with succulent beef.',
   },
   {
     name: 'Beef Zurbian',
     price: '₹300',
-    image:
-      'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85',
-    description: 'Slow-cooked beef with bold Arabian spices and rice.',
+    image: beefZurbian,
+    description:
+      'Slow-cooked beef with bold Arabian spices and rice.',
   },
   {
     name: 'Beef Madghout',
     price: '₹300',
-    image:
-      'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1000&q=85',
-    description: 'Tender beef and fragrant rice with balanced spices.',
+    image: beefMadghout,
+    description:
+      'Tender beef and fragrant rice with balanced spices.',
   },
   {
     name: 'Choice of Salad',
     price: '₹100',
-    image:
-      'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1000&q=85',
-    description: 'Fresh seasonal salad to complement your meal.',
+    image: salad,
+    description:
+      'Fresh seasonal salad to complement your meal.',
   },
 ];
 
@@ -150,62 +182,52 @@ const STARTERS = [
   {
     name: 'Chicken Fry',
     price: '₹220',
-    image:
-      'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=900&q=85',
+    image: chickenFry,
   },
   {
     name: 'Chicken 65',
     price: '₹220',
-    image:
-      'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=85',
+    image: chicken65,
   },
   {
     name: 'Chicken Kebab',
     price: '₹220',
-    image:
-      'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85',
+    image: chickenKebab,
   },
   {
     name: 'Chicken Kondattam',
     price: '₹240',
-    image:
-      'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85',
+    image: chickenKondattam,
   },
   {
     name: 'Alfaham Chicken',
     price: '₹260',
-    image:
-      'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85',
+    image: alfahamChicken,
   },
   {
     name: 'Broasted Chicken',
     price: '₹240',
-    image:
-      'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=85',
+    image: broastedChicken,
   },
   {
     name: 'Fish Fry',
     price: '₹180',
-    image:
-      'https://images.unsplash.com/photo-1580959375944-abd7e991f971?auto=format&fit=crop&w=900&q=85',
+    image: fishFry,
   },
   {
     name: 'Fish Fingers',
     price: '₹200',
-    image:
-      'https://images.unsplash.com/photo-1544986581-efac024faf62?auto=format&fit=crop&w=900&q=85',
+    image: fishFingers,
   },
   {
     name: 'Fish Kebab',
     price: '₹220',
-    image:
-      'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85',
+    image: fishKebab,
   },
   {
     name: 'Prawns Lollipop',
     price: '₹260',
-    image:
-      'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=85',
+    image: prawnsLollipop,
   },
 ];
 
@@ -214,23 +236,23 @@ const MAIN_COURSE = [
   {
     name: 'Kadai Chicken',
     price: '₹250',
-    image:
-      'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1000&q=85',
-    description: 'Tender chicken with peppers, onions and kadai spices.',
+    image: kadaiChicken,
+    description:
+      'Tender chicken with peppers, onions and kadai spices.',
   },
   {
     name: 'Chicken Kurma (Stew)',
     price: '₹230',
-    image:
-      'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=85',
-    description: 'Creamy chicken kurma with traditional aromatic spices.',
+    image: chickenKurma,
+    description:
+      'Creamy chicken kurma with traditional aromatic spices.',
   },
   {
     name: 'Chicken Mulakittathu',
     price: '₹230',
-    image:
-      'https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=1000&q=85',
-    description: 'Traditional Kerala-style chicken curry with bold spices.',
+    image: chickenMulakittathu,
+    description:
+      'Traditional Kerala-style chicken curry with bold spices.',
   },
 ];
 
